@@ -223,6 +223,7 @@ async def to_pay_energyz_prest(request: Request):
         _insta = body['event']['pulseName']
         column_ids = ['email_mksa3z84', 'formula_mksadzsw', 'text_mksa2v7e']
         columns_data = get_info_energyz(id_, column_ids)
+        print("columns_data:", columns_data)
         data = [columns_data["email_mksa3z84"]["email"]]
         prix = columns_data["text_mksa2v7e"]['text']
         iban_key = get_formula_column_value(id_, 'formula_mksadzsw')
